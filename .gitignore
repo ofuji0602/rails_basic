@@ -35,7 +35,6 @@ public/assets
 config/master.key
 
 # Ignore database.yml
-/config/database.yml
 /config/database.yml.default
 
 # Ignore credentials file
