@@ -4,8 +4,8 @@
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
 # Ignore bundler config.
-.bundle
-/vendor/bundle
+/.bundle
+/vendor
 
 # Ignore all environment files (except templates).
 .env*
@@ -29,6 +29,7 @@ tmp/pids/*
 
 # Ignore compiled assets.
 public/assets
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 config/master.key
