@@ -67,3 +67,6 @@ gem "bootstrap", "~> 5.0.2"
 
 # Add sorcery
 gem "sorcery"
+
+# Add rails-i18n
+gem "rails-i18n"
