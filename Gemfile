@@ -64,3 +64,6 @@ gem "jquery-rails"
 
 # Add bootstrap
 gem "bootstrap", "~> 5.0.2"
+
+# Add sorcery
+gem "sorcery"
