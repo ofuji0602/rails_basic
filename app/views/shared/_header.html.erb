@@ -9,28 +9,39 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto main-nav align-items-center">
+      <ul class="navbar-nav ms-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             掲示板
           </a>
 
-          <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-menu dropdown-menu-end">
             <%= link_to '掲示板一覧', '#', class: 'dropdown-item' %>
             <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
           </div>
         </li>
-
+        <li class="nav-item dropdown dropdown-slide">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            リンク
+          </a>
+          <div class="dropdown-menu dropdown-menu-end">
+            <%= link_to raw('<i class="fas fa-space-shuttle" style="color: cornflowerblue;"></i> リンク1'), '#', class: 'dropdown-item' %>
+            <%= link_to raw('<i class="fas fa-kiwi-bird" style="color: cornflowerblue;"></i> リンク2'), '#', class: 'dropdown-item' %>
+            <%= link_to raw('<i class="fas fa-snowman" style="color: cornflowerblue;"></i> リンク3'), '#', class: 'dropdown-item' %>
+          </div>
+        </li>
         <li class="nav-item">
           <%= link_to 'ブックマーク一覧', '#', class: 'nav-link' %>
         </li>
 
         <li class="nav-item dropdown dropdown-slide">
-          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
+          <a href="#" class="nav-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
             <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15'%>
           </a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-item">らんてっく たろう</div>
+          
+          
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class="dropdown-item">ラーメン マン</div>
             <div class="dropdown-divider"></div>
             <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
 
