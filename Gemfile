@@ -70,3 +70,6 @@ gem "sorcery"
 
 # Add rails-i18n
 gem "rails-i18n"
+
+# Add rdraper
+gem "draper"
