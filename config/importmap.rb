@@ -8,4 +8,4 @@ pin "bootstrap" # @5.3.3
 pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
 
 pin "@fortawesome/fontawesome-free", to: "https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.2.1/js/all.js"
-pin_all_from 'app/javascript/files', under: 'files'
+pin_all_from "app/javascript/files", under: "files"
