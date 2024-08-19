@@ -63,7 +63,7 @@ gem "sass-rails", ">= 6"
 gem "jquery-rails"
 
 # Add bootstrap
-gem "bootstrap", "~> 5.0.2"
+gem "bootstrap", "~> 5.3.3"
 
 # Add sorcery
 gem "sorcery"
