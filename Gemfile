@@ -74,14 +74,14 @@ gem "rails-i18n"
 # Add draper
 gem "draper"
 
-#Add aker
-gem 'faker'
+# Add aker
+gem "faker"
 
-#Add spring
-gem 'spring'
+# Add spring
+gem "spring"
 
-#Add rake
-gem 'rake', '~> 13.0'
+# Add rake
+gem "rake", "~> 13.0"
 
-#Add font-awesome-sass
-gem 'font-awesome-sass'
+# Add font-awesome-sass
+gem "font-awesome-sass"
