@@ -71,5 +71,17 @@ gem "sorcery"
 # Add rails-i18n
 gem "rails-i18n"
 
-# Add rdraper
+# Add draper
 gem "draper"
+
+#Add aker
+gem 'faker'
+
+#Add spring
+gem 'spring'
+
+#Add rake
+gem 'rake', '~> 13.0'
+
+#Add font-awesome-sass
+gem 'font-awesome-sass'

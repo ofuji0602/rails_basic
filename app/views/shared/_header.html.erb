@@ -12,11 +12,11 @@
       <ul class="navbar-nav ms-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            掲示板
+            <%= Board.model_name.human %>
           </a>
 
           <div class="dropdown-menu dropdown-menu-end">
-            <%= link_to '掲示板一覧', '#', class: 'dropdown-item' %>
+            <%= link_to t('boards.index.title'), boards_path, class: 'dropdown-item' %>
             <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
           </div>
         </li>
