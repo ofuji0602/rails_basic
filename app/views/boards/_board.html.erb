@@ -8,21 +8,21 @@
             <%= board.title %>
           </a>
         </h4>
-        <div class='mr10 float-right'>
-          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-          <a href="#"><%= icon 'fa', 'pen' %></a>
+        <div class='float-end'>
+          <a href="#" class="text-danger"><i class="fas fa-trash pr-1 text-primary"></i></a>
+          <a href="#" class="text-primary"><i class="fas fa-pen"></i></a>
         </div>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <%= icon 'far', 'user' %>
+        <div>
+          <div>
+            <i class="far fa-user"></i>
             <%= board.user.decorate.full_name %>
-          </li>
-          <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
+          </div>
+          <div>
+            <i class="far fa-calendar-alt"></i>
             <%= l board.created_at, format: :long %>
-          </li>
-        </ul>
-        <p class="card-text"><%= board.body %></p>
+          </div>
+        </div>
+        <p class="card-text mt-3"><%= board.body %></p>
       </div>
     </div>
   </div>

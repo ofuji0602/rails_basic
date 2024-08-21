@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+
+  has_many :boards, dependent: :destroy
   # パスワードのバリデーション
   # 新しいレコードである場合、または `crypted_password` フィールドが変更された場合にのみ適用される
   # パスワードの長さが最低3文字であることを検証
