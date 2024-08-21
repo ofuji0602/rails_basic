@@ -1,9 +1,14 @@
 ja:
   activerecord:
     models:
+      # モデル名の翻訳設定
+      # ここで、モデルの名前を日本語に翻訳しています。
       user: 'ユーザー'
       board: '掲示板'
+
     attributes:
+      # モデルの属性に対する翻訳設定
+      # ここで、モデルの属性名を日本語に翻訳しています。
       user:
         email: 'メールアドレス'
         password: 'パスワード'
@@ -11,5 +16,29 @@ ja:
         last_name: '姓'
         first_name: '名'
       board:
-          title: 'タイトル'
-          body: '本文'
+        title: 'タイトル'
+        body: '本文'
+
+  errors:
+    models:
+      # モデルごとのエラーメッセージ設定
+      # エラーメッセージがどの属性に対応するかを指定しています。
+      user:
+        attributes:
+          password:
+            blank: "パスワードを入力してください" # パスワードが空の場合のエラーメッセージ
+            too_short: "パスワードは%{count}文字以上で入力してください" # パスワードが短すぎる場合のエラーメッセージ。%{count} は最低文字数に置き換えられます。
+          password_confirmation:
+            blank: "パスワード確認を入力してください" # パスワード確認が空の場合のエラーメッセージ
+          email:
+            blank: "メールアドレスを入力してください" # メールアドレスが空の場合のエラーメッセージ
+          first_name:
+            blank: "名を入力してください" # 名が空の場合のエラーメッセージ
+          last_name:
+            blank: "姓を入力してください" # 姓が空の場合のエラーメッセージ
+      board:
+        attributes:
+          title:
+            blank: "タイトルを入力してください" # タイトルが空の場合のエラーメッセージ
+          body:
+            blank: "本文を入力してください" # 本文が空の場合のエラーメッセージ
