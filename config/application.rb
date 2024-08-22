@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module RailsBasic
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.2
+    config.load_defaults 7.1
     # Generators configuration
     config.generators do |g|
       g.skip_routes true       # ルーティングファイルの自動生成をスキップ

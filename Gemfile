@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.0"
+gem "rails", "~> 7.1.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -57,13 +57,13 @@ group :test do
 end
 
 # Use sass-rails instead of sassc
-gem "sass-rails", ">= 6"
+gem "sass-rails"
 
 # Add jquery-rails
 gem "jquery-rails"
 
 # Add bootstrap
-gem "bootstrap", "~> 5.0.2"
+gem "bootstrap"
 
 # Add sorcery
 gem "sorcery"
@@ -85,3 +85,9 @@ gem "rake", "~> 13.0"
 
 # Add font-awesome-sass
 gem "font-awesome-sass"
+
+# Add carrierwave
+gem "carrierwave"
+
+# Add mini_magick
+gem "mini_magick"

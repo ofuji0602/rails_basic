@@ -1,4 +1,4 @@
-class CreateBoards < ActiveRecord::Migration[7.2]
+class CreateBoards < ActiveRecord::Migration[7.1]
   def change
     # boardsテーブルを作成します
     create_table :boards do |t|
