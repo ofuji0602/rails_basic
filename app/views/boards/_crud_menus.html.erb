@@ -1,0 +1,12 @@
+<ul class="crud-menu-btn list-inline float-end">
+  <li class="list-inline-item">
+    <%= link_to '#', id: "button-edit-#{board.id}", class: "btn btn-outline-primary" do %>
+      <%= icon 'fa', 'pen' %>
+    <% end %>
+  </li>
+  <li class="list-inline-item">
+    <%= link_to '#', id: "button-delete-#{board.id}", class: "btn btn-outline-primary" do %>
+      <%= icon 'fas', 'trash' %>
+    <% end %>
+  </li>
+</ul>

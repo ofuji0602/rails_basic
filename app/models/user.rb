@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
 
   has_many :boards, dependent: :destroy
+  has_many :comments, dependent: :destroy
   # パスワードのバリデーション
   # 新しいレコードである場合、または `crypted_password` フィールドが変更された場合にのみ適用される
   # パスワードの長さが最低3文字であることを検証
@@ -28,4 +29,8 @@ class User < ApplicationRecord
   # 姓のバリデーション
   # 姓が存在することと、長さが最大255文字であることを検証
   validates :last_name, presence: true, length: { maximum: 255 }
+
+  def own?(object)
+    id == object.user_id
+  end
 end

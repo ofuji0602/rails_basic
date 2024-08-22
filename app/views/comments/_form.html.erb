@@ -1,0 +1,15 @@
+<div class="row mb-3">
+  <div class="col-lg-8 offset-lg-2">
+    <%= form_with model: comment, url: [board, comment], local: true, class: 'needs-validation' do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="mb-3">
+        <%= f.label :body, class: 'form-label' %>
+        <%= f.text_area :body, class: 'form-control', id: 'js-new-comment-body', rows: 4, placeholder: Comment.human_attribute_name(:body), required: true %>
+        <div class="invalid-feedback">
+          <%= t('errors.messages.blank') %>
+        </div>
+      </div>
+      <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

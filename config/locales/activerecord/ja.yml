@@ -5,6 +5,7 @@ ja:
       # ここで、モデルの名前を日本語に翻訳しています。
       user: 'ユーザー'
       board: '掲示板'
+      comment: 'コメント'
 
     attributes:
       # モデルの属性に対する翻訳設定
@@ -19,6 +20,8 @@ ja:
         title: 'タイトル'
         body: '本文'
         board_image: 'サムネイル'
+      comment:
+        body: 'コメント'
 
   errors:
     models:
