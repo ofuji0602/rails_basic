@@ -1,4 +1,4 @@
-<div class="col-sm-12 col-lg-4 mb-3">
+<div class="col-12 col-lg-4 mb-3">
   <div id="board-id-<%= board.id %>">
     <div class="card">
       <%= image_tag board.board_image_url, class: 'card-img-top', size: '300x200' %>
@@ -6,8 +6,8 @@
         <h4 class="card-title">
           <%= board.title %>
         </h4>
-        <%= render 'crud_menus', board: board %>
-        <div>
+        <%= render 'crud_menus', board: board if current_user.own?(board) %>
+        <div class="mb-2">
           <div>
             <i class="far fa-user"></i>
             <%= board.user.decorate.full_name %>
@@ -17,11 +17,13 @@
             <%= l board.created_at, format: :long %>
           </div>
         </div>
-        <p class="card-text mt-3">
-          <% if board.body.length > 25 %>
-            <%= link_to truncate(board.body, length: 20) + '...続きを読む', board_path(board), class: "text-link" %>
+        <p class="card-text">
+          <% if board.body.length > 15 %>
+            <%= truncate(board.body, length: 15) %>
+            <%= link_to '続きを見る', board_path(board), class: "text-link" %>
           <% else %>
-            <%= link_to board.body, board_path(board), class: "text-link" %>
+            <%= board.body %>
+            <%= link_to '続きを見る', board_path(board), class: "text-link" %>
           <% end %>
         </p>
       </div>

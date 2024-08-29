@@ -1,11 +1,13 @@
 <ul class="crud-menu-btn list-inline float-end">
+  <!-- 編集ボタン -->
   <li class="list-inline-item">
-    <%= link_to '#', id: "button-edit-#{board.id}", class: "btn btn-outline-primary" do %>
+    <%= link_to edit_board_path(board), id: "button-edit-#{board.id}", class: "btn btn-sm btn-outline-primary" do %>
       <%= icon 'fa', 'pen' %>
     <% end %>
   </li>
+  <!-- 削除ボタン -->
   <li class="list-inline-item">
-    <%= link_to '#', id: "button-delete-#{board.id}", class: "btn btn-outline-primary" do %>
+    <%= link_to board_path(board), id: "button-delete-#{board.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: "btn btn-sm btn-outline-primary" do %>
       <%= icon 'fas', 'trash' %>
     <% end %>
   </li>
