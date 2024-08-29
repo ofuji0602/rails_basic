@@ -6,7 +6,11 @@
         <h4 class="card-title">
           <%= board.title %>
         </h4>
-        <%= render 'crud_menus', board: board if current_user.own?(board) %>
+        <% if current_user.own?(board) %>
+          <%= render 'crud_menus', board: board %>
+        <% else %>
+          <%= render 'bookmark_button', board: board  %>
+        <% end %>
         <div class="mb-2">
           <div>
             <i class="far fa-user"></i>
