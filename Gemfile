@@ -91,3 +91,6 @@ gem "carrierwave"
 
 # Add mini_magick
 gem "mini_magick"
+
+# Add kaminar
+gem "kaminari"

@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   # 一覧表示アクション
   def index
     # 全てのボードを取得し、ユーザー情報も一緒に読み込む
-    @boards = Board.all.includes(:user).order(created_at: :desc)
+    @boards = Board.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   # 新規作成フォームの表示アクション
@@ -59,7 +59,7 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
