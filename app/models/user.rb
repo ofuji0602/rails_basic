@@ -53,4 +53,14 @@ class User < ApplicationRecord
     # 現在のユーザーがブックマークしているボードの集合に指定したボードが含まれているかどうかをチェックする
     bookmark_boards.include?(board)
   end
+
+  # Ransack で検索可能な関連モデルを定義
+  def self.ransackable_associations(auth_object = nil)
+    [ "boards", "bookmark_boards", "bookmarks", "comments" ]
+  end
+
+  # Ransack で検索可能な属性を定義
+  def self.ransackable_attributes(auth_object = nil)
+    [ "first_name", "last_name", "email", "created_at", "updated_at" ]
+  end
 end

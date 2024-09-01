@@ -94,3 +94,6 @@ gem "mini_magick"
 
 # Add kaminar
 gem "kaminari"
+
+# Add ransack
+gem "ransack"
