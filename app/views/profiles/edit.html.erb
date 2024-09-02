@@ -1,0 +1,40 @@
+<% content_for(:title, t('.title')) %>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h1 class="mb-4"><%= t('.title') %></h1>
+      <%= form_with model: @user, url: profile_path, local: true do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        
+        <div class="mb-3">
+          <%= f.label :email, class: 'form-label' %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :last_name, class: 'form-label' %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :first_name, class: 'form-label' %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :avatar, class: 'form-label' %>
+          <%= f.file_field :avatar, onchange: 'previewFileWithId("preview")', class: 'form-control', accept: 'image/*' %>
+          <%= f.hidden_field :avatar_cache %>
+        </div>
+
+        <div class="text-center mb-4">
+          <%= image_tag @user.avatar.url, class: 'rounded-circle', id: 'preview', style: 'width: 100px; height: 100px;' %>
+        </div>
+
+        <div class="col-2">
+          <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
