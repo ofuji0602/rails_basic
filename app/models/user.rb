@@ -20,7 +20,8 @@ class User < ApplicationRecord
   # 新しいレコードである場合、または `crypted_password` フィールドが変更された場合にのみ適用される
   # パスワード確認が存在することを検証
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
-
+  
+  validates :reset_password_token, uniqueness: true, allow_nil: true
   # メールアドレスのバリデーション
   # メールアドレスが一意であることと、存在することを検証
   validates :email, uniqueness: true, presence: true

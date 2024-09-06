@@ -97,3 +97,9 @@ gem "kaminari"
 
 # Add ransack
 gem "ransack"
+
+# Add letter_opener_we
+gem "letter_opener_web"
+
+# Add config
+gem "config"
