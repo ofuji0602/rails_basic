@@ -1,0 +1,11 @@
+{
+  "name": "rails_basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ofuji0602/rails_basic.git",
+  "author": "ofuji0602 <hitujimofumofu0206@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "admin-lte": "^3.2.0"
+  }
+}

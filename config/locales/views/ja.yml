@@ -16,6 +16,7 @@ ja:
       delete_confirm: '削除しますか？'
       updated: "掲示板を更新しました"
       not_updated: "掲示板の更新に失敗しました"
+      not_authorized: '権限がありません'
   users:
     new:
       title: 'ユーザー登録'
@@ -67,4 +68,15 @@ ja:
     update:
       success: 'パスワードを変更しました'
       fail: 'パスワードの変更に失敗しました'
-    
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+      index:
+        title: 'ダッシュボード'
