@@ -103,3 +103,6 @@ gem "letter_opener_web"
 
 # Add config
 gem "config"
+
+# Add enum_help
+gem "enum_help"

@@ -1,4 +1,4 @@
-class Admin::DashboardDecorator < Draper::Decorator
+class Admin::BoardDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through
